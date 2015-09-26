@@ -1,0 +1,38 @@
+{
+  "name": "style-resets",
+  "version": "1.0.0",
+  "description": "resets for inline-styles",
+  "main": "dist/index.js",
+  "files": [
+    "package.json",
+    "dist/index.js",
+    "README.md",
+    "LICENSE"
+  ],
+  "scripts": {
+    "prebuild": "rm -fr dist && mkdir dist",
+    "build": "babel lib/index.js --out-file dist/index.js",
+    "test": "babel-node --stage 0 lib/__tests__/index.js",
+    "bump": "npm run build && npm publish"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/bloodyowl/style-resets.git"
+  },
+  "keywords": [
+    "style",
+    "resets",
+    "inline-styles"
+  ],
+  "author": "bloodyowl",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/bloodyowl/style-resets/issues"
+  },
+  "homepage": "https://github.com/bloodyowl/style-resets#readme",
+  "devDependencies": {
+    "babel": "^5.8.23",
+    "tape": "^4.2.0",
+    "tape-catch": "^1.0.4"
+  }
+}
